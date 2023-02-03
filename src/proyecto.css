@@ -1,0 +1,34 @@
+
+#project-wraper{
+    font-family: 'Unbounded', cursive;
+    color: white;
+    min-height: 100vh;
+    width: 100vw;
+    background-image: url('../public/grid-faint.png'), radial-gradient( rgba(10,72,116,1)80%, #CCFEA4);
+    background-position:center;
+    background-repeat: repeat, no-repeat;
+    overflow-x:hidden;
+    margin: -0.5em !important;
+}
+.projectWrap{
+    width: 80%;
+    margin: auto;
+}
+.role{
+    color: #CCFEA4;
+    text-transform: uppercase;
+    font-weight: bolder;
+    display: block;
+    margin: 2em 0;
+}
+video{
+    margin: 2em -0.8em;
+    width: 100%;
+    border: 10px solid #77E0EE;
+    border-radius: 15px;
+}
+@media only screen and (min-width: 768px) {
+    .projectWrap{
+        width: 50%;
+    }
+}

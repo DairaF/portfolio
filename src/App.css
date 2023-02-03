@@ -1,0 +1,166 @@
+.homeContainer{
+  scroll-snap-type: x mandatory;
+}
+.child {
+scroll-snap-align: start;
+}
+/* DEMO-SPECIFIC STYLES */
+.typewriter h2 {
+overflow: hidden; /* Ensures the content is not revealed until the animation */
+border-right: .10em solid #35F0B8; /* The typwriter cursor */
+white-space: nowrap; /* Keeps the content on a single line */
+margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+margin-bottom: 1em;
+letter-spacing: .15em; /* Adjust as needed */
+animation: 
+  typing 3.5s steps(30, end),
+  blink-caret .5s step-end infinite;
+  animation-iteration-count:3;
+}
+
+/* The typing effect */
+@keyframes typing {
+from { width: 0 }
+to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+from, to { border-color: transparent }
+50% { border-color: #35F0B8 }
+}
+
+
+body{
+font-family: 'Roboto', sans-serif;
+color: white;
+height: 100%;
+width: 100%;
+background-image: url('../public/grid.png'), radial-gradient(rgba(15,149,206,1) 30%, rgba(13,158,189,1) 55%, rgba(10,72,116,1) 86%);
+background-repeat: repeat, no-repeat;
+overflow-x: hidden;
+}
+h1,h2,h3,h4{
+font-family: 'Unbounded', cursive;
+}
+#home{
+width: 80%;
+margin:auto;
+text-align: center;
+overflow: hidden;
+height: 100vh;
+}
+#home h1{
+margin-bottom: -0.2em;
+margin-top: 40vh;
+}
+#home h2 {
+font-weight:400;
+}
+h1{
+font-size: 5em;
+text-align: center;
+text-transform: uppercase;
+}
+/* h2::first-letter{
+text-transform: capitalize;
+} */
+a{
+color: white;
+text-decoration: none;
+}
+a:hover{
+color: #CCFEA4 !important;
+}
+.roleCard{
+color: #CCFEA4;
+font-weight: bolder;
+display: block;
+margin: -1em 0 2em 0;
+font-family: 'Unbounded', cursive;
+}
+p{
+font-family: 'Roboto', sans-serif !important;
+font-size: 1em;
+}
+ul{
+padding: 0 !important;
+font-family: 'Roboto', sans-serif;
+}
+.skills ul li::before {
+content: "\2022";
+color: #CCFEA4;
+font-weight: bold;
+display: inline-block; 
+width: 1em;
+margin-left: -1em;
+}
+.skills ul li {
+font-size: 0.9em;
+list-style: none;
+list-style-position: inside;
+text-align: left;
+margin-left: 45%;
+}
+.button{
+background-color: #FF918A;
+border: none;
+border-radius: 1em;
+padding: 0.5em 2em;
+color: rgba(10,72,116,1);
+font-weight: bold;
+}
+.tag{
+font-size: 0.9em;
+background-color: #77E0EE;
+border: none;
+border-radius: 1em;
+padding: 0.2em 1em;
+color: rgba(10,72,116,1);
+font-weight: bold;
+font-family: 'Roboto', sans-serif;
+margin: 0.2em;
+}
+.mb-2{
+margin-bottom: 2em;
+}
+h1{
+font-size: 2em;
+}
+#desginer{
+color: #CCFEA4
+}
+#developer{
+color: #35F0B8
+}
+.fadeInUp{
+width:100px;
+height:100px;
+position:relative;
+animation:mymove 3s ease-out forwards;
+
+/* Safari and Chrome */
+-webkit-animation:mymove 3s;
+}
+
+@keyframes mymove
+{ from {top:-50px; opacity: 0;}
+to {top:0px; opacity: 1}
+}
+
+@-webkit-keyframes mymove /* Safari and Chrome */
+{
+from {top:-50px; opacity: 0;}
+to {top:0px; opacity: 1;}
+}
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@media only screen and (min-width: 768px) {
+#home{
+    width: 21em;
+    text-align: left;
+}
+h1{
+    font-size: 5em;
+}
+}
