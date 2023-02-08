@@ -16,6 +16,7 @@ function App() {
             <Route path="/" element={<Landing/>} />
             <Route path="/proyectos/" element={<Project/>} />
             <Route path="/proyectos/:id" element={<Project/>} />
+            <Route path="/:id" element={<Project/>} />
           </Routes>
       </HashRouter>
     </div>
