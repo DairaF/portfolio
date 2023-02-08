@@ -23,7 +23,7 @@ const Card = ({ handlePointerEvent, name, thumbnail, cardStyle, id, role, descri
           })}
           </div>
           </div>
-          <a className="button" href={"/proyectos/"+id}>
+          <a className="button" href="/proyectos/[id]" as={"/proyectos/"+id}>
             Ver más
           </a>
         </div>
