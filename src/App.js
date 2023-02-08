@@ -1,6 +1,7 @@
 
 import './App.css';
 import {
+  HashRouter,
   BrowserRouter,
   Routes,
   Route
@@ -10,13 +11,13 @@ import Project from './routes/Proyecto';
 function App() {
   return (
     <div className="App">
-        <BrowserRouter basename='/portfolio'>
+        <HashRouter basename='/portfolio'>
           <Routes>
             <Route path="/" element={<Landing/>} />
             <Route path="/proyectos/" element={<Project/>} />
             <Route path="/proyectos/:id" element={<Project/>} />
           </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
