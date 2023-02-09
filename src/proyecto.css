@@ -1,4 +1,6 @@
-
+#top{
+    margin: 3em 0;
+}
 #project-wraper{
     font-family: 'Unbounded', cursive;
     color: white;
@@ -28,6 +30,9 @@ video{
     border-radius: 15px;
 }
 @media only screen and (min-width: 768px) {
+    #top{
+        margin: 1em 0;
+    }
     .projectWrap{
         width: 50%;
     }
