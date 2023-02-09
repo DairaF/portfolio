@@ -29,10 +29,16 @@ video{
     border: 10px solid #77E0EE;
     border-radius: 15px;
 }
+#project-wraper h1{
+font-size: 2em;
+}
 @media only screen and (min-width: 768px) {
     #top{
         margin: 1em 0;
     }
+    #project-wraper h1{
+        font-size:4em;
+        }
     .projectWrap{
         width: 50%;
     }
