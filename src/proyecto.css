@@ -5,7 +5,7 @@
     font-family: 'Unbounded', cursive;
     color: white;
     min-height: 100vh;
-    width: 100vw;
+    /* width: 100vw; */
     background-image: url('../public/grid-faint.png'), radial-gradient( rgba(10,72,116,1)80%, #CCFEA4);
     background-position:center;
     background-repeat: repeat, no-repeat;
