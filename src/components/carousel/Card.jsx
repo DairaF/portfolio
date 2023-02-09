@@ -9,9 +9,7 @@ const Card = ({ handlePointerEvent, name, thumbnail, cardStyle, id, role, descri
         >
           <div className="cardImg" style={{backgroundImage: `url(/${thumbnail})`,}}>
           </div>
-          <a href={"/proyectos/"+id}>
             <h2>{name}</h2>
-          </a>
           <span className="roleCard">{role}</span>
           <p>{description}</p>
           <div className="skills">

@@ -25,7 +25,7 @@ const Proyecto = ({id,  setCurrId}) => {
             <div id='project-wraper'>
             <Navigation tellId={setCurrId}/>
                 <div className='projectWrap'>
-                    <h1>{proyecto.name}</h1>
+                    <h1 id="top">{proyecto.name}</h1>
                     {proyecto.link!== "" ? <a className='button' href={proyecto.link} target="_blank">visitar sitio</a> : ""}
                     <span className='role'>{proyecto.role}</span>
                     <h3>Herramientas utilizadas</h3>
@@ -50,6 +50,10 @@ function Landing() {
     const [id, setId]=useState(0);
     const setCurrId = (newId) => {
         setId(newId);
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
     }
     return(
         <div>
