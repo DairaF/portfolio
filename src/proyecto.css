@@ -29,7 +29,7 @@
     height: 100%;
 } */
 .videos{
-    margin-top: 2em;
+    margin: 5em 0;
     width: 100%;
     display: flex;
     overflow: hidden;
@@ -73,7 +73,7 @@ font-size: 2em;
 }
 @media only screen and (min-width: 1000px) {
     .videos{
-        margin-top: 2em;
+        margin: 8em 0;
         width: 100%;
         display: flex;
         overflow: hidden;
