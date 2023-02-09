@@ -2,7 +2,6 @@
 import './App.css';
 import {
   HashRouter,
-  BrowserRouter,
   Routes,
   Route
 } from "react-router-dom";
@@ -11,7 +10,7 @@ import Project from './routes/Proyecto';
 function App() {
   return (
     <div className="App">
-        <HashRouter basename='/portfolio'>
+        <HashRouter>
           <Routes>
             <Route path="/" element={<Landing/>} />
             <Route path="/proyectos/" element={<Project/>} />
