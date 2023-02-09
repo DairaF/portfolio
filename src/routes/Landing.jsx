@@ -19,7 +19,7 @@ const Home = ({setCurrId}) => {
 } 
 const Proyecto = ({id,  setCurrId}) => {
     const proyecto = data[id-1];
-    const videoUrl = "/" + proyecto.video;
+    const [currVid, setCurrVid]=useState("desk");
     return (
         <div>
             <div id='project-wraper'>
@@ -38,7 +38,17 @@ const Proyecto = ({id,  setCurrId}) => {
                     </div>
                     <h3>Desarrollo del proyecto</h3>
                     <div dangerouslySetInnerHTML={ { __html: proyecto.content } }></div>
-                    <video controls src={videoUrl} />
+                    <div className='videos'>
+                        {proyecto.videoDesk!==""&& proyecto.videoMob!=="" ? 
+                        <div className='vidSwitch'>
+                            <button className={currVid === "desk" ? 'button selected':'button'} onClick={()=>{setCurrVid("desk")}}>Landscape</button>                     
+                            <button className={currVid === "mob" ? 'button selected':'button'} onClick={()=>{setCurrVid("mob")}}>Portrait</button>
+                        </div>
+                        :""}
+                    <video className={currVid === "desk" ? 'vidDesk show':'hide vidDesk'} controls src={"/" + proyecto.videoDesk} />                      
+                    <video className={currVid === "mob" ? 'vidMob show':'hide vidMob'} controls src={"/" + proyecto.videoMob} />
+                        
+                    </div>
                 </div>
                     <Carousel tellId={setCurrId}/>
             </div>

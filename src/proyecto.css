@@ -23,11 +23,39 @@
     display: block;
     margin: 2em 0;
 }
-video{
-    margin: 2em -0.8em;
-    width: 100%;
+/* video{
     border: 10px solid #77E0EE;
     border-radius: 15px;
+    height: 100%;
+} */
+.videos{
+    margin-top: 2em;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.vidDesk{
+    width: 100%;
+    float: right;
+}
+.vidMob{
+    height: 80%;
+    width: 100%;
+    float: right;
+    margin: auto;
+}
+.vidSwitch{
+    width: 25%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.vidSwitch button{
+    margin: 1em;
 }
 #project-wraper h1{
 font-size: 2em;
@@ -41,5 +69,34 @@ font-size: 2em;
         }
     .projectWrap{
         width: 50%;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    .videos{
+        margin-top: 2em;
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+        height: 500px;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row
+    }
+    .vidDesk{
+        width: 70%;
+        float: right;
+    }
+    .vidMob{
+        height: 100%;
+        width: auto;
+        float: right;
+        margin: auto;
+    }
+    .vidSwitch{
+        width: 25%;
+        height: 100%;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }

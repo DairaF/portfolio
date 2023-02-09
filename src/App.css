@@ -142,7 +142,16 @@ margin: 0.2em;
   /* Safari and Chrome */
   -webkit-animation:mymove 3s;
 }
-
+.hide{
+  display: none;
+}
+.show{
+  display: block;
+}
+.selected{
+  font-weight: bolder;
+  color: white;
+}
 @keyframes mymove
 { from {top:-50px; opacity: 0;}
 to {top:0px; opacity: 1}
