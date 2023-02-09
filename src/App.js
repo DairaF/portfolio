@@ -8,6 +8,9 @@ import {
 import Landing from './routes/Landing';
 import Project from './routes/Proyecto';
 function App() {
+  // const fetchData = async () => {
+  //   const results = await axios.get('/.netlify/functions/getParam')
+  // }
   return (
     <div className="App">
         <HashRouter>

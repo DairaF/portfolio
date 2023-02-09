@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-const Card = ({ handlePointerEvent, name, thumbnail, cardStyle, id, role, description, tecnical }) => {
+const Card = ({ handlePointerEvent, name, thumbnail, cardStyle, id, role, description, tecnical, tellId }) => {
   return (
     <article className={cardStyle}>
         <div
@@ -23,9 +23,10 @@ const Card = ({ handlePointerEvent, name, thumbnail, cardStyle, id, role, descri
           })}
           </div>
           </div>
-          <a className="button" href="/proyectos/[id]" as={"/proyectos/"+id}>
+          <button className="button" onClick={()=>{tellId(id)}}>Ver más</button>
+          {/* <a href="/proyectos/id" as={"/proyectos/"+id}>
             Ver más
-          </a>
+          </a> */}
         </div>
     </article>
   );

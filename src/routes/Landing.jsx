@@ -1,10 +1,10 @@
-import React from 'react';
+import { useState }  from 'react';
 import  Carousel  from '../components/carousel/Carousel'
-import { useParams } from 'react-router-dom';
 import {data} from "../data"
 import  Navigation  from '../components/navigation/Navigation'
 import '../proyecto.css'
-const Home = () => {
+
+const Home = ({setCurrId}) => {
     return (
         <div>
             <div id='home' className='typewriter child'>
@@ -12,21 +12,18 @@ const Home = () => {
                 <h2>creative <span id='developer'>developer</span></h2>
             </div>
             <div className='child'>
-                <Carousel/>
+                <Carousel tellId={setCurrId}/>
             </div>
         </div>
   );
 } 
-
-const Proyecto = () => {
-    const params = useParams();
-    let id = params.id;    
+const Proyecto = ({id,  setCurrId}) => {
     const proyecto = data[id-1];
     const videoUrl = "/" + proyecto.video;
     return (
         <div>
             <div id='project-wraper'>
-            <Navigation/>
+            <Navigation tellId={setCurrId}/>
                 <div className='projectWrap'>
                     <h1>{proyecto.name}</h1>
                     {proyecto.link!== "" ? <a className='button' href={proyecto.link} target="_blank">visitar sitio</a> : ""}
@@ -43,19 +40,20 @@ const Proyecto = () => {
                     <div dangerouslySetInnerHTML={ { __html: proyecto.content } }></div>
                     <video controls src={videoUrl} />
                 </div>
-                    <Carousel/>
+                    <Carousel tellId={setCurrId}/>
             </div>
 
         </div>
   );
 }
 function Landing() {
-    const params = useParams();
-    let id = params.id;    
-
+    const [id, setId]=useState(0);
+    const setCurrId = (newId) => {
+        setId(newId);
+    }
     return(
         <div>
-            { !id ? <Proyecto/> : <Home/> }
+            { id==0 ? <Home setCurrId={setCurrId}/> : <Proyecto id={id} setCurrId={setCurrId}/>}
         </div>
     )
 }
