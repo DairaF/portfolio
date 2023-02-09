@@ -55,6 +55,7 @@ function Landing() {
 
     return(
         <div>
+            <h1>{id}</h1>
             { id ? <Proyecto/> : <Home/> }
         </div>
     )
