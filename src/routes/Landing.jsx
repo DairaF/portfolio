@@ -37,7 +37,7 @@ const Proyecto = ({id,  setCurrId}) => {
                         })}
                     </div>
                     <h3>Desarrollo del proyecto</h3>
-                    <div dangerouslySetInnerHTML={ { __html: proyecto.content } }></div>
+                    <div id='content' dangerouslySetInnerHTML={ { __html: proyecto.content } }></div>
                     <div className='videos'>
                         {proyecto.videoDesk!==""&& proyecto.videoMob!=="" ? 
                         <div className='vidSwitch'>

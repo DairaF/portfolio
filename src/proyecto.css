@@ -16,6 +16,9 @@
     width: 80%;
     margin: auto;
 }
+#content{
+    font-size: small;
+}
 .role{
     color: #CCFEA4;
     text-transform: uppercase;
