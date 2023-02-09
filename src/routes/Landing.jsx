@@ -1,10 +1,26 @@
 import React from 'react';
 import  Carousel  from '../components/carousel/Carousel'
+import { useParams } from 'react-router-dom';
 import {data} from "../data"
 import  Navigation  from '../components/navigation/Navigation'
 import '../proyecto.css'
-function Proyecto() {
-    let id = 1;
+const Home = () => {
+    return (
+        <div>
+            <div id='home' className='typewriter child'>
+                <h1 className='fadeInUp'>Daira</h1>
+                <h2>creative <span id='developer'>developer</span></h2>
+            </div>
+            <div className='child'>
+                <Carousel/>
+            </div>
+        </div>
+  );
+} 
+
+const Proyecto = () => {
+    const params = useParams();
+    let id = params.id;    
     const proyecto = data[id-1];
     const videoUrl = "/" + proyecto.video;
     return (
@@ -33,5 +49,15 @@ function Proyecto() {
         </div>
   );
 }
+function Landing() {
+    const params = useParams();
+    let id = params.id;    
 
-export default Proyecto;
+    return(
+        <div>
+            { id ? <Proyecto/> : <Home/> }
+        </div>
+    )
+}
+
+export default Landing;
