@@ -8,7 +8,7 @@ export const data = [
       videoMob: "quizmobile.mp4",
       role: "front end dev",
       description: "Desarrollo de pagina educativa didactica para informar sobre la inclusión en el habla.",
-      content: "En esta oportunidad el foco estuvo puesto en la educación lingüística y a la autoevaluación de la inclusión que cada uno utiliza de manera lúdica por medio de un quiz. Fue un proyecto cuyos destinatarios son personas de edad avanzada que quieran aprender sobre lenguaje inclusivo como el caso de profesores que quieran poder relacionarse mejor con sus estudiantes o pares más jóvenes. El trabajo fue en conjunto con el equipo de Fundar quien se encargó de aportar el contenido escrito y conceptual, y el equipo de diseño (Brenda y Fede), elaboré el sitio utilizando React.js.js para lograr una web app eficiente, responsive y cross browser.",
+      content: "<p>En esta oportunidad el foco estuvo puesto en la educación lingüística y a la autoevaluación de la inclusión que cada uno utiliza de manera lúdica por medio de un quiz en el cual se identifican oportunidades de cambio, y se seleccionan diferentes herramientas. Fue un proyecto cuyos destinatarios son personas de edad avanzada que quieran aprender sobre lenguaje inclusivo como el caso de profesores que quieran poder relacionarse mejor con sus estudiantes o pares más jóvenes.</p><p> El trabajo fue en conjunto con el equipo de Fundar quien se encargó de aportar el contenido escrito y conceptual, y el equipo de diseño, elaboré el sitio utilizando React.js.js para lograr una web app eficiente, responsive y cross browser.</p>",
       tecnical: ['React.js', 'Bootstrap', 'Json']
     },
     {
@@ -21,8 +21,8 @@ export const data = [
       role: "front end dev",
       description: "Desarrollo de un juego web para un tour guiado en el museo Saavedra",
       texto:"",
-      content: "Lola en Saavedra trata de una alternativa lúdica al recorrido guiado del Museo Saavedra pensada para los visitantes más chiquitos. En este recorrido el usuario debe ayudar al personaje principal, Lola, a conocer distintos personajes históricos que brindan información y pistas para poder continuar juntos el recorrido. El desarrollo de diseño estuvo a cargo de de Carola, y fue llevado a cabo como una experiencia mobile con el uso de vanilla Javascript, HTML y CSS.",
-      tecnical: ['css', 'html', 'js']
+      content: "<p>Lola en Saavedra trata de una alternativa lúdica al recorrido guiado del Museo Saavedra pensada para los visitantes más chiquitos.</p><p> En este recorrido el usuario debe ayudar al personaje principal, Lola, a conocer distintos personajes históricos que brindan información y pistas para poder continuar juntos el recorrido. El desarrollo de diseño estuvo a cargo de una colega, y fue llevado a cabo como una experiencia mobile.</p><p> Tencincamente el cliente requirió de un desarrollo vanilla solo con Javascript, HTML y CSS.</p>",
+      tecnical: ['CSS', 'HTML', 'JS']
     },
     {
       id:3,
@@ -57,7 +57,7 @@ export const data = [
       videoMob: "anuariomob.mp4",
       role: "front end dev",
       description: "Desarrollo del anuario 2021 de la fundacion Fundar.",
-      content: "Se trató del desarrollo de un sitio que cuente de los proyectos hechos en el año 2021 por la fundación Fundar. El proceso comenzó con el diseño UX desarrollado por Brenda Burgoa, una vez la fase de testing finalizó se continuó por la etapa de UI realizada por los diseñadores de The Negra. Finalmente realicé el proceso de desarrollo full stack utilizando PHP y Json para demostrar el contenido, siendo la web testeada por última vez antes de publicarse.",
+      content: "<p>Se trató del desarrollo de un sitio que cuente de los proyectos hechos en el año 2021 por la fundación Fundar.</p><p> El proceso comenzó con el diseño UX, una vez la fase de testing finalizó se continuó por la etapa de UI realizada por los diseñadores de The Negra. </p><p>Finalmente realicé el proceso de desarrollo full stack utilizando PHP y Json para demostrar el contenido, siendo la web testeada por última vez antes de publicarse.</p>",
       tecnical: ['React.js', 'Json', 'Bootstrap']
     },
     {
@@ -74,14 +74,14 @@ export const data = [
     },
     {
       id:7,
-      name: " Zamba y Nina preguntan",
+      name: "Zamba y Nina preguntan",
       thumbnail: 'zamba.png',
       link:"",
       videoDesk: "",
       videoMob: "zamba.mp4",
       role: "game dev",
       description: "Desarrollo de un quiz instalado en Tecnópolis",
-      content: "Este proyecto fue parte de una instalación presentada en Tecnópolis, exposición de tecnología, arte y ciencia. Trata de una trivia para niños sobre contenido de tecnología y ciencia en base a contenido audiovisual provisto. Dicha trivia finaliza en un listado de puntajes de otros participantes y donde está posicionado el jugador en este. En este proyecto participé en el desarrollo del videojuego en sí, haciendo uso de Unity y Json para poder crearlo.",
+      content: "<p>Este proyecto fue parte de una instalación presentada en Tecnópolis, exposición de tecnología, arte y ciencia. </p><p>Trata de una trivia para niños sobre contenido de tecnología y ciencia en base a contenido audiovisual provisto.</p><p>Dicha trivia finaliza en un listado de puntajes de otros participantes y donde está posicionado el jugador en este.</p><p> En este proyecto participé en el desarrollo del videojuego en sí, haciendo uso de Unity y Json para poder crearlo.</p>",
       tecnical: ['unity']
     }
   ];

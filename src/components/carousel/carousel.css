@@ -44,7 +44,6 @@ article {
   position: absolute;
   width: 80%;
   height: 100%;
-
   transition: all 1s;
 }
 
@@ -179,7 +178,7 @@ article {
   
     color: #35F0B8;
   }
-  
+
   .card-container svg:hover {
     cursor: pointer;
     color: #FF918A;
@@ -198,7 +197,13 @@ article {
   }
 }
 @media screen and (max-width: 425px) {
-  
+  article{
+    width: 100%;
+  }
+  .card{
+    width: 100%;
+    margin-left: -0.5em;
+  }
   .container {
     width: 100%;
     overflow: hidden;

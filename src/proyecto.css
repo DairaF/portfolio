@@ -32,16 +32,16 @@
     height: 100%;
 } */
 .videos{
-    margin: 5em 0;
+    margin: 5em 0 1em 0;
     width: 100%;
     display: flex;
     overflow: hidden;
-    height: 100vh;
     align-items: center;
     flex-direction: column;
     justify-content: flex-start;
 }
 .vidDesk{
+    margin-top: 1em;
     width: 100%;
     float: right;
 }
