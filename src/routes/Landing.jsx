@@ -20,6 +20,7 @@ const Home = ({setCurrId}) => {
 const Proyecto = ({id,  setCurrId}) => {
     const proyecto = data[id-1];
     const [currVid, setCurrVid]=useState("desk");
+    proyecto.videoDesk ? setCurrId("desk") : setCurrId("mob");
     return (
         <div>
             <div id='project-wraper'>
