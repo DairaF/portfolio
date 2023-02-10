@@ -1,4 +1,4 @@
-import { useState }  from 'react';
+import { useState, useEffect }  from 'react';
 import  Carousel  from '../components/carousel/Carousel'
 import {data} from "../data"
 import  Navigation  from '../components/navigation/Navigation'
@@ -20,7 +20,10 @@ const Home = ({setCurrId}) => {
 const Proyecto = ({id,  setCurrId}) => {
     const proyecto = data[id-1];
     const [currVid, setCurrVid]=useState("desk");
-    proyecto.videoDesk ? setCurrId("desk") : setCurrId("mob");
+    useEffect(() => {
+        proyecto.videoDesk !== "" ? setCurrVid("desk") : setCurrVid("mob"); 
+        proyecto.videoDesk !== "" ? console.log('setCurrVid("desk")') : console.log('setCurrVid("mob")'); 
+    }, [proyecto.videoDesk])
     return (
         <div>
             <div id='project-wraper'>
@@ -68,7 +71,7 @@ function Landing() {
     }
     return(
         <div>
-            { id==0 ? <Home setCurrId={setCurrId}/> : <Proyecto id={id} setCurrId={setCurrId}/>}
+            { id===0 ? <Home setCurrId={setCurrId}/> : <Proyecto id={id} setCurrId={setCurrId}/>}
         </div>
     )
 }
