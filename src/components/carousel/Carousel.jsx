@@ -1,12 +1,16 @@
 import './carousel.css'
 import { useState } from "react";
-import {data} from "../../data"
 import Card from "./Card";
 import Paginator from "./Paginator";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
-function Carousel (props) {
+import {dataEsp} from "../../dataEsp"
+import {dataEng} from "../../dataEng"
 
+function Carousel (props) {
+  let data
+  props.language === "esp" ? data=dataEsp : data=dataEng
+  console.log(data);
     const [index, setIndex] = useState(0);
 
     const slideLeft = () => {

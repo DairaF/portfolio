@@ -1,4 +1,4 @@
-export const data = [
+export const dataEsp = [
     {
       id:1,
       name: "Hablemos de cómo hablamos",

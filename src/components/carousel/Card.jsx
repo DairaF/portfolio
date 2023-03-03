@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
-const Card = ({ handlePointerEvent, name, thumbnail, cardStyle, id, role, description, tecnical, tellId }) => {
+import {UIText} from "../../UIText"
+const Card = ({ handlePointerEvent, name, thumbnail, cardStyle, id, role, description, tecnical, tellId, language }) => {
+  const text = UIText[0]
+  let textKey
+  language === "esp" ? textKey=0 : textKey=1
   return (
     <article className={cardStyle}>
         <div
@@ -21,7 +25,7 @@ const Card = ({ handlePointerEvent, name, thumbnail, cardStyle, id, role, descri
           })}
           </div>
           </div>
-          <button className="button" onClick={()=>{tellId(id)}}>Ver más</button>
+          <button className="button" onClick={()=>{tellId(id)}}>{text.expand[textKey]}</button>
           {/* <a href="/proyectos/id" as={"/proyectos/"+id}>
             Ver más
           </a> */}

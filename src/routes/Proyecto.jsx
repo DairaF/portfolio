@@ -1,10 +1,9 @@
 import React from 'react';
 import  Carousel  from '../components/carousel/Carousel'
 import { useParams } from 'react-router-dom';
-import {data} from "../data"
 import  Navigation  from '../components/navigation/Navigation'
 import '../proyecto.css'
-function Proyecto() {
+function Proyecto({data}) {
     const params = useParams();
     let id = params.id;
     const proyecto = data[id-1];
