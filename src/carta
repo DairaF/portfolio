@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #1a6954;
+  color:white
+}
+
+.flip-card {
+  background-color: transparent;
+  padding:10px;
+  width: 200px;
+  height: 300px;
+  perspective: 1000px;
+  transform: rotate(90deg)
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  transform-origin:center;
+  animation: linear 90s twist infinite alternate-reverse;
+}
+
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-size: 100%;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Joker_Card_Image.jpg/640px-Joker_Card_Image.jpg");
+}
+
+.flip-card-back {background-image: url("https://c8.alamy.com/compes/br01mh/decoracion-ornamental-en-el-reverso-de-una-baraja-de-cartas-br01mh.jpg");
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+@keyframes twist {
+  0%{
+    transform: rotate3d(1, 1, 10, 0turn);
+  }
+  100%{
+    
+    transform:  rotate3d(1, 100, 10, 25turn);
+  }
+ }
+  @keyframes sway {
+  0%{
+    transform: translate(0px,20px);
+  }
+  100%{
+    
+    transform: translate(0px,100px);
+  }
+ }
+ .card-anim{
+ 	position:fixed;
+    top:0;
+    left:20%;
+    z-index:-10
+ }
+ h1{
+ 	z-index: 100;
+    text-transform: uppercase;
+    font-size: 3em
+ }
+.text{
+  position:relative;
+  width: 100vw;
+  height: 100vh
+}
+</style>
+</head>
+<body>
+<section id="comodin">	
+	<div clas="text">
+      <h1>jack of all trades</h1>
+      <h1>master of none</h1>
+      <h1>better than master of one</h1>
+  </div>
+  <div class="card-anim">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        </div>
+        <div class="flip-card-back">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
